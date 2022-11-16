@@ -1,0 +1,35 @@
+
+
+
+
+
+
+
+import random
+
+numdig=3
+maxguess=10
+
+def main():
+    print(''' Welcome to Bagels....A detuctive logic game.
+
+I am thinking of a number which is secret with no repeated digits.
+Try to guess the {} digit number with the clues given:
+When I say:          That means:
+Pico                 one digit is correct but in wrong position.
+Fermi                one digit is correct and in the right position.
+Bagels               No digit  is correct
+       '''.format(numdig))
+    while True:
+
+        secretnum=getSecretNum()
+        print('I have thought up a number.')
+        print('You have {} guesses to find it out'.format(maxguess))
+
+        guessno=1
+        while guessno<=maxguess:
+            guess=''
+
+            while(len(guess)!=numdig or not guess.isdecimal()):
+                
+
